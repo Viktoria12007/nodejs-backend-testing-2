@@ -1,2 +1,7 @@
 node_modules
 reports
+/.idea/vcs.xml
+/test-report.html
+/.idea/nodejs-backend-testing-2.iml
+/.idea/modules.xml
+/.idea/.gitignore
