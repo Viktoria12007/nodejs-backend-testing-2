@@ -22,19 +22,19 @@ describe('PostsService', () => {
     });
 
     it('should return all posts if called without options', () => {
-      expect(postsService.findMany()).toEqual(expect.arrayContaining(newPosts))
+      expect(postsService.findMany()).toEqual(newPosts)
     });
 
     it('should return correct posts for skip and limit options', () => {
-      expect(postsService.findMany({ skip: 1, limit: 2 })).toEqual(expect.arrayContaining([newPosts[1], newPosts[2]]))
+      expect(postsService.findMany({ skip: 1, limit: 2 })).toEqual([newPosts[1], newPosts[2]])
     });
 
     it('should return correct posts for skip option', () => {
-      expect(postsService.findMany({ skip: 1 })).toEqual(expect.arrayContaining(newPosts.slice(1)))
+      expect(postsService.findMany({ skip: 1 })).toEqual(newPosts.slice(1))
     });
 
     it('should return correct posts for limit option', () => {
-      expect(postsService.findMany({ limit: 2 })).toEqual(expect.arrayContaining(newPosts.slice(0, 2)))
+      expect(postsService.findMany({ limit: 2 })).toEqual(newPosts.slice(0, 2))
     });
   });
 });
